@@ -34,7 +34,7 @@ def train(model):
     sess = gpt2.start_tf_sess()
 
     gpt2.finetune(sess,
-                  'content/lyrics.csv',
+                  'data/lyrics.csv',
                   model_name=model_name,
                   sample_every=50,
                   save_every=50,
