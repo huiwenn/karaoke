@@ -34,7 +34,7 @@ def train(model):
     sess = gpt2.start_tf_sess()
 
     gpt2.finetune(sess,
-                  'data/lyrics.csv',
+                  'data/lyrics.txt',
                   model_name=model_name,
                   sample_every=50,
                   save_every=50,
@@ -62,7 +62,7 @@ def generate():
 
 def main(m='124M'):
     #data()
-    model(m)
+    #model(m)
     train(m)
     generate()
 
