@@ -7,11 +7,12 @@ import argparse
 if __name__ == '__main__':
 	
 	parser = argparse.ArgumentParser()
-	parser.add_argument('prefix', type=str, nargs='+',
+	parser.add_argument('prefix', type=str,
 	                   help='input prefix string for generation')
 	args = parser.parse_args()
 
-	sess = gpt2.start_tf_sess(run_name="lyrics")
+	sess = gpt2.start_tf_sess()
 	gpt2.load_gpt2(sess)
+        print(args.prefix)
 	text = gpt2.generate(sess, prefix=args.prefix, return_as_list=True)
 	print(" ".join(text))
