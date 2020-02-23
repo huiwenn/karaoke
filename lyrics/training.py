@@ -43,8 +43,9 @@ def train(model):
                   batch_size=batch_size,
                   restore_from='latest',
                   steps=500)   # max number of training steps
+    return sess
 
-def generate():
+def generate(sess):
     lst_results=gpt2.generate(
         sess,
         prefix="<|startoftext|>",
@@ -63,8 +64,8 @@ def generate():
 def main(m='124M'):
     #data()
     #model(m)
-    train(m)
-    generate()
+    sess = train(m)
+    generate(sess)
 
 
 if __name__ == '__main__':
