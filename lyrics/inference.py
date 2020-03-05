@@ -16,6 +16,10 @@ if __name__ == '__main__':
 
     with open(args.file,'r') as f:
         prime = f.readline()
-        print(prime)
-        text = gpt2.generate(sess, prefix=prime, return_as_list=True)
-        print(" ".join(text))
+        while prime:
+            print(prime)
+            text = gpt2.generate(sess, prefix=prime, return_as_list=True)
+            print(" ".join(text))
+            prime = f.readline()
+
+
