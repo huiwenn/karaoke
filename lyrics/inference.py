@@ -19,7 +19,8 @@ if __name__ == '__main__':
         while prime:
             print(prime)
             text = gpt2.generate(sess, prefix=prime, return_as_list=True)
-            print(" ".join(text))
+            joined = " ".join(text)
+            print(joined)
+            with open("samples/{}.txt".format(prime),'w') as txt:
+                txt.write(joined)
             prime = f.readline()
-
-
