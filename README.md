@@ -4,7 +4,7 @@
 ## Run the lyrics generator
 Currently the fine-tuned model lives in BMO. (TODO: make it a service???) Run the following command in the `\lyrics` directory.
 
-`python inference.py 'priming sentence' `
+`python inference.py titles.txt `
 
 ## Image generation
 
