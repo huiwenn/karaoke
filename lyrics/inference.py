@@ -21,6 +21,6 @@ if __name__ == '__main__':
             text = gpt2.generate(sess, prefix=prime, return_as_list=True)
             joined = " ".join(text)
             print(joined)
-            with open("samples/{}.txt".format(prime),'w') as txt:
+            with open("samples/{}.txt".format(prime.strip()),'w') as txt:
                 txt.write(joined)
             prime = f.readline()
