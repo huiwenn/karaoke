@@ -2,6 +2,7 @@
 */models/*
 */checkpoint/*
 vis/AttnGAN/*
+lyrics/samples_unprocessed/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
