@@ -8,4 +8,3 @@ with open('./vis/AttnGAN/data/coco/example_filenames.txt', 'w') as f:
 		if file[-3:] == "txt":
 			f.write('../../../lyrics/samples/{}\n'.format(file[:-4]))
 
-
