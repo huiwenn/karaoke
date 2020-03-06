@@ -3,7 +3,7 @@ import os
 
 unwanted_char = [ '[', ']', '\"']
 
-files = os.listdir("./samples")
+files = os.listdir("./samples_unprocessed")
 
 for f in files:
 	if f[-3:] != "txt":

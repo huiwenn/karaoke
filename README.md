@@ -8,7 +8,12 @@ Currently the fine-tuned model lives in BMO. (TODO: make it a service???) Run th
 
 ## Image generation
 
-idea: we will use [attnGAN](https://arxiv.org/pdf/1711.10485.pdf) and maybe do something similar to what goodkids did [here](https://neurips2019creativity.github.io/doc/Text%20Conditional%20Lyric%20Video%20Generation.pdf). How doable is it in real time?
+we will use [attnGAN](https://arxiv.org/pdf/1711.10485.pdf) and maybe do something similar to what goodkids did [here](https://neurips2019creativity.github.io/doc/Text%20Conditional%20Lyric%20Video%20Generation.pdf). The downloaded model also lives in BMO. Commands:
+
+`python2 main.py --cfg cfg/eval_coco.yml --gpu 0`
+
+`./vis/AttnGAN/models/coco_AttnGAN2/example_captions/`
+
 
 ## Midi generation
 
