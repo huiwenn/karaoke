@@ -10,7 +10,7 @@ for f in files:
 		continue
 	print(f)
 
-	with open("./samples/"+f, 'r') as txt:
+	with open("./samples_unprocessed/"+f, 'r') as txt:
 		alllines = []
 		chunk = txt.readline()
 		while chunk:
@@ -23,5 +23,5 @@ for f in files:
 			alllines += ['\n']
 			chunk = txt.readline()
 
-		with open("./samples/processed/"+f, 'w') as p:
+		with open("./samples/"+f, 'w') as p:
 			p.write("\n".join(alllines))

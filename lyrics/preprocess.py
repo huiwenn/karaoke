@@ -1,9 +1,11 @@
-import pandas as pd
-import numpy as np
+import os
 
-df = pd.read_csv('data/lyrics.csv')
-print(df.head)
+files = os.listdir("./lyrics/samples")
 
-with open('data/lyrics.txt', 'w') as f:
-    for item in df.values:
-        f.write("%s\n" % item)
+
+with open('./vis/AttnGAN/data/coco/example_filenames.txt', 'w') as f:
+	for file in files:
+		if f[-3:] == "txt":
+			f.write('../../../lyrics/samples/{}\n'.format(file))
+
+
