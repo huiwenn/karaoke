@@ -21,7 +21,7 @@ we will use [attnGAN](https://arxiv.org/pdf/1711.10485.pdf) and maybe do somethi
 
 _new workflow !?_
 
-`python generate_images.py`
+`python lyrics/generate_images.py`
 
 
 ## Midi generation

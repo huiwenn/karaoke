@@ -11,6 +11,8 @@ for f in files:
 	song_name = f[:-4]
 	os.makedirs("./vis/img/{}".format(song_name), exist_ok=True)
 
+	counter = 0
+
 	with open("./lyrics/samples/{}".format(f), 'r') as lyr:
 		lines = lyr.readlines()
 	
@@ -34,5 +36,9 @@ for f in files:
 		imgs = os.listdir("./vis/AttnGAN/models/coco_AttnGAN2/{}".format(dir_name))
 		for img in imgs:
 			if img[-5] == '2': #big image!
-				os.system("mv vis/AttnGAN/models/coco_AttnGAN2/{}/{} vis/img/{}"
-					.format(dir_name, img, song_name))
+				os.system("mv vis/AttnGAN/models/coco_AttnGAN2/{}/{} vis/img/{}/{}.png"
+					.format(dir_name, img, song_name, counter))
+				counter += 1
+
+		break
+	break
