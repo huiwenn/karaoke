@@ -6,7 +6,7 @@ for f in files:
 	if file[-3:] != "txt":
 		continue
 
-	song_name = file[:-4]
+	song_name = f[:-4]
 
 	# first: make small batches
 	os.mkdir("./lyrics/{}".format(song_name))
