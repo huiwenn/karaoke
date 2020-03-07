@@ -12,8 +12,8 @@ for f in files:
 	os.mkdir("./lyrics/{}".format(song_name))
 	ct = 0
 
-	with open("./lyrics/samples/{}".format(f), 'r'):
-		lines = f.readlines()
+	with open("./lyrics/samples/{}".format(f), 'r') as lyr:
+		lines = lyr.readlines()
 	
 	fnames = []
 
