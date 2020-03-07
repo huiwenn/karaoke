@@ -8,7 +8,7 @@ for f in files:
 	if f[-3:] != "txt":
 		continue
 
-	song_name = f[:-4]
+	song_name = "_".join(f[:-4].split(" "))
 	os.makedirs("./vis/img/{}".format(song_name), exist_ok=True)
 
 	counter = 0
