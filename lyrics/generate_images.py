@@ -39,6 +39,3 @@ for f in files:
 				os.system("mv vis/AttnGAN/models/coco_AttnGAN2/{}/{} vis/img/{}/{}.png"
 					.format(dir_name, img, song_name, counter))
 				counter += 1
-
-		break
-	break
