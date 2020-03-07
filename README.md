@@ -19,7 +19,9 @@ we will use [attnGAN](https://arxiv.org/pdf/1711.10485.pdf) and maybe do somethi
 
 `./vis/AttnGAN/models/coco_AttnGAN2/example_captions/`
 
-`mv vis/AttnGAN/models/coco_AttnGAN2 vis/img`
+_new workflow !?_
+
+`python generate_images.py`
 
 
 ## Midi generation
