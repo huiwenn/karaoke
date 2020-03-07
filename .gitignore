@@ -3,6 +3,7 @@
 */checkpoint/*
 vis/AttnGAN/*
 lyrics/samples_unprocessed/*
+lyrics/tmp/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
