@@ -1,6 +1,7 @@
 import os
 import tqdm
 
+os.makedirs("./lyrics/tmp", exist_ok=True)
 files = os.listdir("./lyrics/samples")
 
 for f in files:
@@ -10,13 +11,14 @@ for f in files:
 	song_name = f[:-4]
 
 	os.makedirs("./lyrics/{}".format(song_name), exist_ok=True)
+
 	ct = 0
 
 	with open("./lyrics/samples/{}".format(f), 'r') as lyr:
 		lines = lyr.readlines()
 	
 	for i in range(int(len(lines)/10)):
-		pth = "./lyrics/tmp/{}_{}".format(song_name, i)
+		pth = "./lyrics/tmp/{}_{}.txt".format(song_name, i)
 		print(pth)
 		with open(pth, 'w') as writefile:
 			if 10*(i+1) >= len(lines):
@@ -32,4 +34,4 @@ for f in files:
 		os.chdir("../../..")
 
 
-
+	pass
