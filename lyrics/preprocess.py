@@ -3,7 +3,7 @@ import os
 files = os.listdir("./lyrics/samples")
 
 for f in files:
-	if file[-3:] != "txt":
+	if f[-3:] != "txt":
 		continue
 
 	song_name = f[:-4]
