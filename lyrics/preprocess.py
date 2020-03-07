@@ -9,7 +9,7 @@ for f in files:
 
 	song_name = f[:-4]
 
-	os.mkdirs("./lyrics/{}".format(song_name), exist_ok=True)
+	os.makedirs("./lyrics/{}".format(song_name), exist_ok=True)
 	ct = 0
 
 	with open("./lyrics/samples/{}".format(f), 'r') as lyr:
