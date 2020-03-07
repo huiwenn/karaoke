@@ -15,7 +15,7 @@ for f in files:
 	with open("./lyrics/samples/{}".format(f), 'r') as lyr:
 		lines = lyr.readlines()
 	
-	for i in range(int(len(total_lines)/10)):
+	for i in range(int(len(lines)/10)):
 		pth = "./lyrics/tmp/{}_{}".format((song_name, i))
 		print(pth)
 		with open(pth, 'w') as writefile:
