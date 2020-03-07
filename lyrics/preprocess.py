@@ -27,11 +27,8 @@ for f in files:
 				writefile.write(''.join(lines[i*10:(i+1)*10]))
 
 		with open('./vis/AttnGAN/data/coco/example_filenames.txt', 'w') as f:
-			f.write('../../../.{}'.format(pth[:-4]))
+			f.write('../../.{}'.format(pth[:-4]))
 
 		os.chdir('vis/AttnGAN/code')
 		os.system("python2 main.py --cfg cfg/eval_coco.yml --gpu 0")
 		os.chdir("../../..")
-
-
-	pass
