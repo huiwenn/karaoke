@@ -1,4 +1,5 @@
 import os
+import tqdm
 
 files = os.listdir("./lyrics/samples")
 
@@ -8,19 +9,20 @@ for f in files:
 
 	song_name = f[:-4]
 
-	# first: make small batches
 	os.mkdir("./lyrics/{}".format(song_name))
 	ct = 0
 
 	with open("./lyrics/samples/{}".format(f), 'r') as lyr:
 		lines = lyr.readlines()
 	
-	fnames = []
-
-	for i in range(len(lines)/10):
+	for i in range(int(len(total_lines)/10)):
 		pth = "./lyrics/tmp/{}_{}".format((song_name, i))
+		print(pth)
 		with open(pth, 'w') as writefile:
-			writefile.write(''.join(lines[i*10:(i+1)*10]))
+			if 10*(i+1) >= len(lines):
+				writefile.write(''.join(lines[i*10:]))
+			else:
+				writefile.write(''.join(lines[i*10:(i+1)*10]))
 
 		with open('./vis/AttnGAN/data/coco/example_filenames.txt', 'w') as f:
 			f.write('../../.{}}'.format(pth))
