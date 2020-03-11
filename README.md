@@ -11,22 +11,22 @@ The result can then betrimmed by the ~ artists ~.
 
 ## Image generation
 
-we will use [attnGAN](https://arxiv.org/pdf/1711.10485.pdf) and maybe do something similar to what goodkids did [here](https://neurips2019creativity.github.io/doc/Text%20Conditional%20Lyric%20Video%20Generation.pdf). The downloaded model also lives in BMO. Commands:
+we use [attnGAN](https://arxiv.org/pdf/1711.10485.pdf) and did something similar to what goodkids did [here](https://neurips2019creativity.github.io/doc/Text%20Conditional%20Lyric%20Video%20Generation.pdf). 
 
-(in karaoke root directory) `python lyrics/preprocess.py`
+The downloaded model also lives in BMO. Commands:
 
-`cd vis/AttnGAN/code`
-
-`python2 main.py --cfg cfg/eval_coco.yml --gpu 0`
-
-`./vis/AttnGAN/models/coco_AttnGAN2/example_captions/`
-
-_new workflow !?_
+(in karaoke root directory)
 
 `python lyrics/generate_images.py`
 
+or for a specific song:
+`python lyrics/generate_images.py --song "so many cats, so little time"`
+
 
 ## Midi generation
+
+due to the limited time & compute resource, we are using [musegan](https://github.com/salu133445/musegan) to generate little pop song bits. (maybe imigrate to magenta's transformer in the future.)
+
 
 ## Conda enviornment
 For versioning consistency, this repo is designed to be run in a conda env.
