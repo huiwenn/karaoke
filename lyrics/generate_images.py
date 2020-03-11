@@ -1,8 +1,16 @@
-import os
-import tqdm
+import os, tqdm
+import argparse
 
 os.makedirs("./lyrics/tmp", exist_ok=True)
-files = os.listdir("./lyrics/samples")
+
+parser = argparse.ArgumentParser(description='generate images')
+parser.add_argument('--song', type=str, help='an integer for the accumulator')
+args = parser.parse_args()
+
+if args.song:
+	files = [args.song+".txt"]
+else:
+	files = os.listdir("./lyrics/samples")
 
 for f in files:
 	if f[-3:] != "txt":

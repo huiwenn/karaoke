@@ -7,6 +7,8 @@ Currently the fine-tuned model lives in BMO. (TODO: make it a service???) Run th
 `python inference.py new_titles.txt`
 `python postprocess.py`
 
+The result can then betrimmed by the ~ artists ~. 
+
 ## Image generation
 
 we will use [attnGAN](https://arxiv.org/pdf/1711.10485.pdf) and maybe do something similar to what goodkids did [here](https://neurips2019creativity.github.io/doc/Text%20Conditional%20Lyric%20Video%20Generation.pdf). The downloaded model also lives in BMO. Commands:
