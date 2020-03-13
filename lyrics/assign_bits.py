@@ -29,9 +29,11 @@ for f in files:
 
 	with open("./lyrics/samples/{}".format(f), 'r') as lyr:
 		line = lyr.readline()
+		skip = False
 		while line:
-			if len(line.strip()) != 0:
+			if len(line.strip()) != 0 and not skip:
 				midis.append(matches[line.strip()])
+			skip = not skip
 			line = lyr.readline()
 
 	song_midi = pretty_midi.PrettyMIDI(midis[0])
@@ -41,7 +43,6 @@ for f in files:
 		midi = pretty_midi.PrettyMIDI(mid)
 		
 		for j, inst in enumerate(midi.instruments):
-
 			new_notes = inst.notes
 			for n in new_notes:
 				n.start += (i+1) * bit_len
