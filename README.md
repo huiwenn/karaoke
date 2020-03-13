@@ -20,7 +20,7 @@ The downloaded model also lives in BMO. Commands:
 `python lyrics/generate_images.py`
 
 or for a specific song:
-`python lyrics/generate_images.py --song "so many cats, so little time"`
+`python lyrics/generate_images.py --song "hack the fuck out of it"`
 
 
 ## Midi generation
