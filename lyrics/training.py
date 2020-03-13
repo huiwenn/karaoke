@@ -28,7 +28,7 @@ def model(model):
 
 def train(model):
     learning_rate = 0.0001
-    optimizer = 'adam' 
+    optimizer = 'adam'
     batch_size = 1
     model_name = model 
     sess = gpt2.start_tf_sess()
@@ -45,10 +45,10 @@ def train(model):
                   steps=500)   # max number of training steps
     return sess
 
-def generate(sess):
+def generate(sess, prompt=""):
     lst_results=gpt2.generate(
         sess,
-        prefix="<|startoftext|>",
+        prefix="<|startoftext|> " + prompt,
         nsamples=10,
         temperature=0.8, # change me
         top_p=0.9, # Change me
@@ -62,13 +62,20 @@ def generate(sess):
         print('\n -------//------ \n')
 
 def main(m='124M'):
-    #data()
-    #model(m)
+    data()
+    model(m)
     sess = train(m)
     generate(sess)
 
 
 if __name__ == '__main__':
     m = '124M' # should be among ["124M","355M","774M"]
-    main(m)
+    #main(m)
+
+    parser = argparse.ArgumentParser(description='prompt')
+    parser.add_argument('--prompt', type=str)
+    args = parser.parse_args()
+    sess = gpt2.start_tf_sess()
+
+    generate(sess, prompt= args.prompt)
 

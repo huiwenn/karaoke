@@ -4,6 +4,7 @@
 vis/AttnGAN/*
 lyrics/samples_unprocessed/*
 lyrics/tmp/*
+lyrics/archive/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
